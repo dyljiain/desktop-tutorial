@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM 4</title>
+    <style>
+
+   P {
+    margin-left: 40px;
+   }
+  </style>
+  </head>
+    <body>
+
+    <h1>Улюблені книги</h1>
+ <div id="list"></div>
+
+<script>
+   var div = document.getElementById('list');
+  var p = document.createElement('p');
+  div.appendChild(p);
+
+  var book = [
+
+ {name:`"Хуліноміка: Хуліганська Економіка. Фінансові ринки для тих, хто їх в гробу бачив"`, author:`Олексій Марков`, age: 2002},
+ {name:`"Замок"`,author:`Франц Кафка`, age: 1926},
+ {name:`"Скотный двор"`, author:`Джордж Оруэлл`,age: 1945},
+ {name:`"Бойцовский клуб"`, author:`Чак Паланик`,age: 1996},
+ {name:`"Перевтілення"`,author:`Франц Кафка`, age: 1912}
+];
+
+  for (var i = 0, ln = book.length; i < ln; i++) {
+    var li = document.createElement('li');
+    li.innerHTML = book[i].name +" " + book[i].author + " "+ book[i].age ;
+
+    p.appendChild(li);
+
+}
+ </script>
+    </body>
+
+</html>

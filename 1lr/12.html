@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+  let cars = [
+          {
+            "owner": "Ivan",
+            "model": "BMW",
+            "volume": 1490
+          },
+          {
+            "owner": "Petya",
+            "model": "Toyota",
+            "volume": 1250
+          },
+          {
+            "owner": "Alex",
+            "model": "Mercedes",
+            "volume": 1370
+          },
+        ]
+
+        var indexMinVol;
+        var valueMinVol = 9999;
+        for (var i = cars.length - 1; i >= 0; i--) {
+            if (cars[i].volume < valueMinVol) {
+                indexMinVol = i;
+                valueMinVol = cars[i].volume;
+            }
+        }
+
+        document.write('Машина з мінімальним об’ємом двигуна: ' + cars[indexMinVol].model + ' ,об’єм ' +cars[indexMinVol].volume);
+        document.write('<br><br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

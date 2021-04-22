@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+  var arr = [-3, 8, -4, 4, 1];
+          document.write('<br>' + 'Масив: ' + arr.join(', '));
+          document.write('<br> Квадрат arr[3-1]: ' + arr[2] + ' = ' + (arr[2] * arr[2]));
+          document.write('<br> Сума першого і останього елементу: ' + arr[0] + ' + ' + arr[4] + ' = ' + (arr[0] + arr[4]));
+
+          var sumNegativeScr = 0;
+          for (var i = arr.length - 1; i >= 0; i--) {
+              if(arr[i] < 0) {
+                  sumNegativeScr += arr[i] * arr[i];
+              }
+          }
+
+          document.write('<br>Сума квадратів від’ємних елементів: ' + sumNegativeScr);
+          document.write('<br><br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>
