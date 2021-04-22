@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <div id="app">
+      <span> {{ description }}</span>
+      <input type="text" v-on:input= "setText" />
+    </div>
+
+<script src="https://unpkg.com//vue@next"></script>
+<script>
+  const App = {
+    data() {
+      return {
+        description: 'My basic App',
+        userText:'UserInput'
+      }
+    },
+    methods:{
+      setText(event){
+        this.userText = event.target.value;
+      }
+    }
+  }
+  Vue.createApp(App).mount('#app')
+  </script>
+  </body>
+</html>
